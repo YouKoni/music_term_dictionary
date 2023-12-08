@@ -1,5 +1,6 @@
 # music_term_dictionary
-######  Java、SQL、HTML/CSSを用いて「音楽記号・用語辞書システム」を作成しました。
+###### Java、SQL、HTML/CSSを用いて「音楽記号・用語辞書システム」を作成しました。
+###### 
 
 ### 開発環境
 - Windows 11, version 23H2
