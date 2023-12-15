@@ -25,5 +25,4 @@ public class DatabaseSettings {
 
 	/** ユニークKEYの重複 */
 	public static final int DB_EXECUTION_FAILURE_ERR_DUP_KEYNAME = 1062;
-
 }
