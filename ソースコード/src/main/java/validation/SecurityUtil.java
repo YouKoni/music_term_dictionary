@@ -25,7 +25,7 @@ public class SecurityUtil {
 		SecureRandom random = null;
 
 		try {
-			// 指定のアルゴリズムを使って、SecureRandomクラスのインスタンスを取得する、
+			// 指定のアルゴリズムを使って、SecureRandomクラスのインスタンスを取得する。
 			random = SecureRandom.getInstance(SecuritySettings.ENCRYPTION_ALGORITHM);
 
 			// 乱数を生成する。
