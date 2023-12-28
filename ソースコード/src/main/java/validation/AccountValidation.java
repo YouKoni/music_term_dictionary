@@ -46,7 +46,5 @@ public class AccountValidation extends Validation {
 		}
 
 		return errors;
-
 	}
-
 }

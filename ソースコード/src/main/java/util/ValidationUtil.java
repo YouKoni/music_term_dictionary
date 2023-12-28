@@ -86,5 +86,4 @@ public class ValidationUtil {
 		FloatValidator object = FloatValidator.getInstance();
 		return object.isValid(value);
 	}
-
 }

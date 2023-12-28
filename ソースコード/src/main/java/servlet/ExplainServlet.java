@@ -31,7 +31,7 @@ public class ExplainServlet extends HttpServlet {
 
 			// リクエストパラメータの文字コードを指定
 			response.setContentType("text/html; charset=UTF-8");
-			int id = Integer.parseInt(request.getParameter("musicTermId"));  
+			int id = Integer.parseInt(request.getParameter("musicTermId")); 
 
 			// 音楽記号・用語のIDを追加
 			MusicTerm musicTerm = new MusicTerm();
@@ -76,7 +76,7 @@ public class ExplainServlet extends HttpServlet {
 
 			// フォワード
 			RequestDispatcher dispatcher =
-					request.getRequestDispatcher("WEB-INF/jsp/explain.jsp");
+				request.getRequestDispatcher("WEB-INF/jsp/explain.jsp");
 			dispatcher.forward(request, response);
 
 		} catch (ClassNotFoundException | SQLException e) {

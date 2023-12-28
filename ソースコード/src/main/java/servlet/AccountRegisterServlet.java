@@ -89,9 +89,16 @@ public class AccountRegisterServlet extends HttpServlet {
 				// ユニークKEYが重複（メールアドレスが重複）しているとき、エラーメッセージをリクエストスコープに保存する。
 				request.setAttribute("dbError", String.format(MessageSettings.MSG_ER_DUP_KEYNAME, account.getEmail()));
 
+				// JSPのinputタグのvalue値の表示に使うためにリクエストパラメータをMapに保存する。
+				Map<String, String> accountUser = new HashMap<String, String>();
+				accountUser.put("email", email);
+				accountUser.put("password", password);
+				accountUser.put("name", name);
+				request.setAttribute("accountUser", accountUser);
+
 				// アカウント登録ページへフォワード
 				RequestDispatcher dispatcher =
-						request.getRequestDispatcher("WEB-INF/jsp/AccountRegister.jsp");
+					request.getRequestDispatcher("WEB-INF/jsp/AccountRegister.jsp");
 				dispatcher.forward(request, response);
 				break;
 
@@ -106,7 +113,7 @@ public class AccountRegisterServlet extends HttpServlet {
 
 			// エラーページへフォワードする。
 			RequestDispatcher dispatcher =
-					request.getRequestDispatcher("WEB-INF/jsp/error.jsp");
+				request.getRequestDispatcher("WEB-INF/jsp/error.jsp");
 			dispatcher.forward(request, response);
 		}
 	}

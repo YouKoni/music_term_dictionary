@@ -25,7 +25,7 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.removeAttribute("accountUser");
 
-		//セッションに保存された検索キーワードを破棄してログアウトする。
+		// セッションに保存された検索キーワードを破棄してログアウトする。
 		session.removeAttribute("key");
 
 		if (isDeleted == null) {
