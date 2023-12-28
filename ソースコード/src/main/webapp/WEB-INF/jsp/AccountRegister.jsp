@@ -30,7 +30,7 @@
 		<div class="card border-dark mb-3">
 			<div class="card-header bg-primary text-white text-center">${title}</div>
 			<div class="card-body">
-			
+				<%-- アカウント登録する際のメールアドレスの重複におけるエラーメッセージ --%>
 				<c:if test="${dbError != null}">
 					<div class="alert alert-danger" role="alert">${dbError}</div>
 				</c:if>
